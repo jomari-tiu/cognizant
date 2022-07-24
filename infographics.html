@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Project Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="css/slick.css"/>
+        <link rel="stylesheet" href="css/slick-theme.css"/>
+        <link rel="stylesheet" href="css/fontawesome.css">
+		<link rel="stylesheet" href="css/aos.css">
+        <link rel="stylesheet" href="css/footer.css">
+    </head>
+
+    
+    <body>
+        <aside class="socialIcons">
+            <ul>
+                <li><a href="" target=""><i class="fab fa-twitter"></i></a></li>
+                <li><a href="" target=""><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="" target=""><i class="fab fa-facebook"></i></a></li>
+                <li><a href="" target=""><i class="fas fa-envelope"></i></a></li>
+            </ul>
+        </aside>
+        <header class="eco-head">
+            <nav class="max">
+                <div class="logo-economist">
+                    <a href="#" target="_blank" onclick="gaEvent()"><img src="images/sample-logo.png" alt=""></a>
+                </div>
+            
+                <div class="button" onclick="toggleMenu()">
+                    <div class="line top"></div>
+                    <div class="line center"></div>
+                    <div class="line bottom"></div>
+                </div>
+
+                <div class="menu-list">
+                    <div class="container-list">
+                        <div class="top">
+                            <div class="left">
+                                <a href="index.html"><i class="fas fa-home"></i>Home</a>
+                                <a href="#" target="_blank"><img src="images/economist-impact.png" alt=""></a>
+                            </div>
+                            <div class="right">
+                                <div class="item">
+                                   <a href="whitepaper.html">
+                                        <img src="images/01_Cognizant_Hub_Index_P1_03.png" alt="">
+                                        <div>
+                                            <p class="p">Whitepaper</p>
+                                            <h5>Aussie rules: how Australian business can lead the future</h5>
+                                        </div>
+                                   </a>
+                                </div>
+                                <div class="item">
+                                    <a onclick="openModal(this)" style="cursor: pointer;"
+                                        data-iframe="<iframe src='https://www.facebook.com/' frameborder='0'></iframe>">
+                                        <img src="images/infographic-img_05.png" alt="">
+                                        <div>
+                                            <p class="p">The Future-Ready Business</p>
+                                            <h5>Benchmark tool</h5>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="#">
+                                        <img src="images/webinar.JPG" alt="">
+                                        <div>
+                                            <p class="p">Webinar</p>
+                                            <h5>Healthcare Insight Hour</h5>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="article.html">
+                                        <img src="images/03_Cognizant_Hub_whitepaper_05.png" alt="">
+                                        <div>
+                                            <p class="p">Article</p>
+                                            <h5>Industry cuts:Mining</h5>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="article.html">
+                                        <img src="images/03_Cognizant_Hub_whitepaper_13.png" alt="">
+                                        <div>
+                                            <p class="p">Article</p>
+                                            <h5>Industry cuts:Insurance</h5>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="article.html">
+                                        <img src="images/01_Cognizant_Hub_Index_P1_03.png" alt="">
+                                        <div>
+                                            <p class="p">Article</p>
+                                            <h5>Industry cuts:BFS</h5>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bottom" style="background-color: #ededed;">
+                        <div class="container-list">
+                            <div class="ads sponsored-content-text1" id="sponsored-text-container1">
+                                <img src="images/close-icon.png" id="close-sponsored-text1" alt="" class="close">
+                                Our sponsors provide financial support for this website. We endeavour to give our sponsors the opportunity to communicate their messages in placements that are clearly demarcated. Such placements are clearly labelled as Advertisement, Advertisement feature, Sponsored content, Sponsor's perspective, "Brought to you by" the sponsor or words to that effect. Occasionally, we group together content from various sources relating to the same topic. In cases where content from The Economist Group is included, it will be clearly labelled as from The Economist or Economist Intelligence Unit. At all times there is a clear division between our editorial staff and sponsors, and sponsors are never allowed to influence what our editorial teams write. Sponsors are solely responsible for their content, and their views do not necessarily reflect those of The Economist.
+                            </div>
+                            <div class="top">
+                                <div class="left center mb">
+                                    <p id="toggle-sponsored-text1" style="cursor: pointer;">Advertisement feature &nbsp;<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="info-circle" class="svg-inline--fa fa-info-circle fa-w-16 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"></path></svg></p>
+                                    <a href="#" target="_blank" onclick="gaEvent"><img src="images/01_Cognizant_Hub_Index_P1_15.png" class="clientLogo" alt=""></a>
+                                    
+                                </div>
+                                <div class="right">
+                                    <div class="item full" style="margin-bottom: 0;">
+                                        <a href="infographics.html">
+                                            <img src="images/01_Cognizant_Hub_Index_P1_03.png" alt="">
+                                            <div>
+                                                <p class="p">Sponsor's perspective</p>
+                                                <h5>Country Infographic</h5>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </nav>
+
+            <div class="line-animation"></div>
+
+        </header>
+
+        <header class="innerpageBanner">
+            <div class="mt"></div>
+            <aside>
+                <img src="images/04_Cognizant_Hub_Infographic_03-bg-infographic.jpg" alt="">
+            </aside>
+        </header>
+
+        <section class="max-container">
+            
+            <img src="images/artbg_03.png" class="bg-left" alt="">
+            <img src="images/artbg_06.png" class="bg-right" alt="">
+            
+            <article class="container">
+
+                <div class="mt"></div>
+                <div class="head-text">
+                    <p class="mini-label">The Future-Ready Benchmark</p>
+                    <h1>Country Infographic</h1>
+                    <p class="normalText">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci fuga 
+                        possimus ducimus tempora veniam voluptate aliquam nemo harum laborum temporibus.
+                    </p>
+                </div>
+
+                <div class="body-container">
+
+                    <img src="images/tbc-image_03.jpg" class="img Infographic-img mb" alt="">
+
+                    <div style="display: flex; justify-content: center;" class="mb">
+                        <a href="#" target="_blank" class="buttonLink2" onclick="gaEvent">Download infographic</a>
+                    </div>
+
+                    <div class="carousel-container">
+                        <div class="container">
+                            <h2 class="exploreMore">Explore More</h2>
+                            <ul class="carousel-Articles">
+                                <li>
+                                    <a href="#">
+                                        <img src="images/infographic-img_03.png" alt="">
+                                        <h4>Healthcare Industry Profile</h4>
+                                        <p>
+                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro ea illo aperiam soluta ducimus vitae debitis amet dolorum quibusdam facilis expedita, neque iure corrupti veritatis, molestias non beatae quisquam at.
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, eligendi.
+                                        </p>
+                                        <div>Read whitepaper</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/infographic-img_05.png" alt="">
+                                        <h4>Benchmark tool</h4>
+                                        <p>
+                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro ea illo aperiam soluta ducimus vitae debitis amet dolorum quibusdam facilis expedita, neque iure corrupti veritatis, molestias non beatae quisquam at.
+                                        </p>
+                                        <div>Try now <i class="fas fa-search"></i></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/infographic-img_05.png" alt="">
+                                        <h4>Benchmark tool</h4>
+                                        <p>
+                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro ea illo aperiam soluta ducimus vitae debitis amet dolorum quibusdam facilis expedita, neque iure corrupti veritatis, molestias non beatae quisquam at.
+                                        </p>
+                                        <div>Try now <i class="fas fa-search"></i></div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <img src="images/04_Cognizant_Hub_Infographic_11.jpg" class="desktopAds" alt="">
+                    <img src="images/04_Cognizant_Hub_Infographic_11.jpg" class="mobileAds" alt="">
+
+                </div>
+                
+            </article>
+        </section>
+
+        <section class="sponsorPerspective" style="background-color: #2e308e;">
+            <div class="container max">
+                <div class="head" style="background-color: #ededed;">
+                    <p id="toggle-sponsored-text">Advertisement feature &nbsp;<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="info-circle" class="svg-inline--fa fa-info-circle fa-w-16 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"></path></svg></p>
+                    <div id="sponsored-text-container" class="sponsored-content-text ads">
+                        <img src="images/close-icon.png" id="close-sponsored-text" alt="">
+                        Our sponsors provide financial support for this website. We endeavour to give our sponsors the opportunity to communicate their messages in placements that are clearly demarcated. Such placements are clearly labelled as Advertisement, Advertisement feature, Sponsored content, Sponsor's perspective, "Brought to you by" the sponsor or words to that effect. Occasionally, we group together content from various sources relating to the same topic. In cases where content from The Economist Group is included, it will be clearly labelled as from The Economist or Economist Intelligence Unit. At all times there is a clear division between our editorial staff and sponsors, and sponsors are never allowed to influence what our editorial teams write. Sponsors are solely responsible for their content, and their views do not necessarily reflect those of The Economist.
+                    </div>
+                </div>
+                <div class="body left">
+                    <div class="text-container">
+                        <div>
+                            <h2>Bio headline for Cognizant</h2>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit assumenda molestias ut cupiditate corrupti facilis excepturi. Aut ipsa libero dolores!</p>
+                            <a href="#" target="_blank" onclick="gaEvent">Learn more <i class="fal fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                    <img src="images/01_Cognizant_Hub_Index_P1_49.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section id="section-footer" class="slide-content">
+            <div class="btn__wrapper" style="background-color: #f2f2f2;">
+                <span id="btn-back-to-top" style="cursor: pointer;" href="#" class="btn__back-to-top" onClick="sendGA('Navigation-Buttons', 'Back to Top', 'variable')">BACK TO TOP</span>
+            </div>    
+            <footer id="page-footer" class="ec-footer">
+                <div class="css-1xmeil4-FooterDiv">
+                    <footer class="css-17emyj5-Footer">
+                        <div class="css-f09p1c-TopLayer fullwidth">
+                            <div class="css-65infu-TopLayer fullwidth">
+                                <ul class="css-13xpa7k-Sublist">
+                                    <li><a href="https://www.economist.com/subscribe"><span>Subscribe</span></a></li>
+                                    <li><a href="https://groupsubscriptions.economist.com/"><span>Group subscriptions</span></a></li>
+                                    <li><a href="#"><span>Reuse our content</span></a></li>
+                                    <li><a href="https://www.economist.com/help/home"><span>Help and contact us</span></a></li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="css-1tjwx5y-BottomLayer">
+                            <div class="bottom-link">
+                                <ul class="css-1g6aune-Left">
+                                    <li><a href="https://www.economist.com/legal/terms-of-use"><span>Terms of Use</span></a></li>
+                                    <li><a href="https://www.economistgroup.com/results_and_governance/governance/privacy/"><span>Privacy</span></a></li>
+                                    <li><a href="https://www.economistgroup.com/results_and_governance/governance/Cookies_information.html"><span>Cookie Policy</span></a></li>
+                                    <li>
+                                        <a href="#manage_cookie_preferences" class="open-popup-link ec-footer__link" onclick="event.preventDefault(); window.evidon.notice.showConsentTool();">Manages</a>
+                                        <!-- For New Consent -->
+                                        <a href="#privacy-manager" class="open-popup-link ec-footer__link" onclick="javascript: window._cmp_.open();">Manage Cookies</a>
+                                    </li>
+                                    <li><a href="https://www.economist.com/help/accessibilitypolicy"><span>Accessibility</span></a></li>
+                                    <li><a href="https://www.economistgroup.com/results_and_governance/governance/guiding_principles.html"><span>Modern Slavery Statement</span></a></li>
+                                    <li><a href="https://www.economistgroup.com/results_and_governance/governance/guiding_principles.html"><span>Do Not Sell My Personal Information</span></a></li>
+                                </ul>
+                            </div>
+                            <div class="css-1b1i8gz-Right">
+                                <p>Copyright © The Economist Newspaper Limited 2019. All rights reserved.</p>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </footer>
+        </section>
+
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/slick.min.js"></script>
+		<script src="js/fontawesome.js"></script>
+		<script src="js/rellax.min.js"></script>
+		<script src="js/aos.js"></script>
+        <script>
+            function toggleMenu () {
+                var menuList = document.querySelector('.menu-list');
+                var top = document.querySelector('.top');
+                var center = document.querySelector('.center');
+                var bottom = document.querySelector('.bottom');
+
+                menuList.classList.toggle('toggle-menu');
+                top.classList.toggle('rotate-top');
+                center.classList.toggle('translate-center');
+                bottom.classList.toggle('rotate-bottom');
+            }
+        </script>
+        <script>
+            $('.carousel-Articles').slick({
+                dots: false,
+                infinite: true,
+                arrows: false,
+                speed: 300,
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                    breakpoint: 640,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                    }
+                ]
+            });
+	
+        </script>
+
+    </body>
+
+</html>

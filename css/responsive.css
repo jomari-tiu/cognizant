@@ -1,0 +1,204 @@
+/* desktop */
+@media(min-width: 1920px){
+    .homepageBanner .inner-container .img-container{width: 60%; margin-right: -10%;}
+}   
+@media screen and (max-width: 1920px) {	
+
+}
+@media screen and (max-width: 1601px) {	
+    .max{max-width: 1300px;}
+    .homepageBanner .inner-container .img-container{width: 55%; margin-right: -5%;}
+    .articleCards .container .card{width: 22%;}
+    .articleCards .container .text-container{width: 30%;}
+    
+}
+@media screen and (max-width: 1440px) {
+    .homepageBanner{background-position-x: 100%; background-size: 50%;}
+    .eco-head nav .menu-list .container-list{padding: 0 32px;}
+}
+@media screen and (max-width: 1366px) {
+    .max{max-width: 1200px;}
+    .homepageBanner .inner-container .text-container .button-container{width: 90%;}
+    .homepageBanner .inner-container .text-container p{width: 90%;}
+}
+@media screen and (max-width: 1280px) {
+    .homepageBanner .inner-container .text-container .button-container{width: 90%; margin-top: 50px;}
+}
+/* End of Desktop */
+
+/* Ipad LandScape */
+@media screen and (max-width: 1080px){
+    .homepageBanner .inner-container .text-container p{width: 85%;}
+    .homepageBanner .inner-container .text-container .button-container{flex-direction: column; margin-top: 20px; width: 85%; padding: 0; background-color: transparent; box-shadow: none;}
+    .homepageBanner .inner-container .text-container .button-container a{width: 100%; background-color: white; border-radius: 50px; margin-bottom: 10px;}
+    .homepageBanner .inner-container .text-container .button-container .icon{width: 50px;}
+    .homepageBanner .inner-container .text-container .button-container .icon img{width: 50%;}
+    .homepageBanner{background-size: 50%; background-position-y: 50%;}
+    .homepageBanner .inner-container .text-container{margin: 20px 0;}
+
+    .text-image .text-container{width: 50%;}
+    .text-image .image-container{width: 45%;}
+    .text-image{align-items: flex-start;}
+
+    .articleCards .container .text-container{width: 100%; margin-bottom: 20px;}
+    .articleCards .container{flex-wrap: wrap;}
+    .articleCards .container .card{width: 30%;}
+
+    .max-container .container .body-container .text-with-card .card-container{height: 200px; width: 400px;}
+
+    .eco-head nav .menu-list .container-list .top .right .item a div h5{font-size: 14px;}
+    .eco-head nav .menu-list .container-list .top .left img{height: 45px;}
+    .eco-head nav .menu-list .container-list .top .left a{font-size: 14px;}
+    .eco-head nav .menu-list .container-list .top .left .clientLogo{height: 25px;}
+    .eco-head nav .menu-list .container-list .top .right .item a img{aspect-ratio: 1.5/1; width: 22%;}
+    .eco-head nav .menu-list .container-list .top .right .item:nth-child(odd){margin: 0; margin-bottom: 10px;}
+    .eco-head nav .menu-list .container-list .top .right .item{width: 100%; margin-bottom: 10px;}
+    .eco-head nav .menu-list .container-list .top .right .item:nth-last-child(1){margin-bottom: 0;}
+    .eco-head nav .menu-list .container-list .top{padding: 10px 0;}
+}
+
+/* Ipad Mini Portrait */
+@media only screen and (max-width: 769px) {
+    .articleCards .container .card{width: 33%;}
+    .articleCards .map-bg{width: 100%;}
+    .homepageBanner .inner-container .text-container{width: 60%;}
+    .homepageBanner .inner-container .text-container p, .text-image .text-container p, .text-image .text-container ul li{font-size: 16px;}
+    .max-container .container .body-container .text-with-card .card-container-2{max-width: 300px;}
+}
+
+
+@media only screen and (max-width: 810px) {
+    .sponsorPerspective .container .body .text-container div{width: 70%;}
+}
+
+@media only screen and (max-width: 640px) {
+    .homepageBanner .inner-container .text-container{width: 100%;}
+    .homepageBanner .inner-container .text-container .button-container{width: 300px;}
+    .homepageBanner .inner-container .text-container p{width: 100%;}
+    .homepageBanner .inner-container .text-container{margin-bottom: 0;}
+    .homepageBanner{background-image: none !important;}
+    .homepageBanner .commision{margin-bottom: 10px;}
+    .homepageBanner .map-mobile{display: block;}
+
+    .text-image{flex-wrap: wrap;}
+    .text-image .text-container{width: 100%; order: 1 !important; margin-bottom: 10px;}
+    .text-image .image-container{width: 100%; order: 2 !important;}
+
+    .webinar .container ul li{width: 50%; margin-bottom: 20px;}
+    .webinar .container ul{flex-wrap: wrap;}
+
+    .max-container .container .body-container .text-with-card .card-container{float: unset; width: 100%; margin: 0; margin-bottom: 20px;}
+
+    .max-container .container .body-container .sponsor-card .body{padding: 30px;}
+
+    .sponsorPerspective .container .body.left .text-container{padding: 30px 0;}
+
+    .eco-head nav .menu-list .container-list .top .left{width: 100%;}
+    .eco-head nav .menu-list .container-list .top .left.mb{margin-bottom: 10px;}
+    .eco-head nav .menu-list .container-list .top .right{width: 100%;}
+    .eco-head nav .menu-list .container-list .top{flex-wrap: wrap;}
+}
+
+@media only screen and (max-width: 480px) {	
+    p{font-size: 16px;}
+
+    .webinar .container ul li h4{font-size: 18px;}
+    .articleCards .container .card{width: 100%; max-width: 300px;}
+    .articleCards .container{justify-content: center;}
+
+    .socialIcons{top: unset; right: unset; left: 50%; transform: translateX(-50%); bottom: 5px;}
+    .socialIcons ul{display: flex; padding: 2px 10px; box-shadow: none;}
+
+    .max-container .container .body-container .text-with-card .card-container .text{flex-wrap: wrap; width: 90%; height: auto;}
+    .max-container .container .body-container .text-with-card .card-container .text h3{width: 100%; text-align: start;}
+    .max-container .container .body-container .text-with-card .card-container .text p{width: 100%;}
+    .max-container .container .body-container .text-with-card .card-container{height: auto; padding: 20px 10px;}
+
+    .max-container .container .head-text, .max-container .container .body-container{padding: 10px; padding-bottom: 0;}
+    .max-container .container .head-text .mini-label{font-size: 12px;}
+
+    .max-container .container .head-text .commisioned a p{font-size: 12px;}
+    .max-container .container .head-text .commisioned a img{height: 30px;}
+
+    .max-container .container .body-container .image-x-list .image-container{width: 100%; order: 2; display: flex; align-items: center;}
+    .max-container .container .body-container .image-x-list .image-container img{width: 100%; max-width: 200px; margin: auto;}
+    .max-container .container .body-container .image-x-list .text-container{width: 100%; order: 1; margin-bottom: 10px;}
+    .max-container .container .body-container .image-x-list{flex-wrap: wrap;}
+
+    .max-container .container .body-container .text-x-image img{float: unset; width: 100%; margin-left: 0;}
+
+    .max-container .container .body-container .key-findings div{flex-wrap: wrap; }
+    .max-container .container .body-container .key-findings div h5{width: 100%; margin: 10px 0;}
+    .max-container .container .body-container .key-findings div p{width: 100%; margin: 0;}
+    .buttonLink{font-size: 12px; text-align: center;}
+
+    .max-container .container .head-text .normalText{margin-bottom: 20px;}
+    .max-container .container .head-text h1{margin-bottom: 20px; padding-bottom: 20px;}
+    .max-container .container .head-text .commisioned{padding: 10px 0;}
+
+
+    .max-container .container .head-text .article-button{flex-wrap: wrap; margin-bottom: 20px;}
+    .max-container .container .head-text .article-button a{width: 100%; margin-bottom: 5px; padding: 5px; font-size: 14px;}
+    .max-container .container .body-container .text-with-card .card-container-2{max-width: unset; width: 100%; margin-left: 0;}
+    .max-container .container .body-container .text-with-card .card-container-2{padding: 20px;}
+
+    .max-container .container .body-container .quote-container{width: 100%;}
+
+    .sponsorPerspective .container .body .text-container{width: 100%;}
+    .sponsorPerspective .container .body img{width: 100%;}
+    .sponsorPerspective .container .body{flex-wrap: wrap;}
+    .sponsorPerspective .container .body .text-container{padding: 20px 0;}
+    .sponsorPerspective .container .body .text-container div{width: 90%;}
+    .sponsorPerspective .container .body.left img{order: 2;}
+    .sponsorPerspective .container .body.left .text-container{order: 1;}
+    .sponsorPerspective .container .body .text-container div a{padding: 5px 30px;font-size: 14px;}
+    .sponsorPerspective .container .head .ads{font-size: 14px;}
+
+    .max-container .container .body-container .desktopAds{display: none;}
+    .max-container .container .body-container .mobileAds{display: inline-block;}
+
+    .embedPopUp .popUp-container .close{right: 0; left: unset; top: unset; bottom: 100%; padding: 0;}
+
+    .eco-head nav .menu-list .container-list .ads{top: unset; bottom: 105%; z-index: 99;}
+
+
+
+}
+
+
+
+/* Iphone 12 Pro */
+@media only screen and (max-width: 390px) {
+}
+
+/* Iphone 6/7/8 */
+@media only screen and (max-width: 375px) {
+    .max-container .container .head-text h1{font-size: 24px;}
+    .max-container .container .head-text .normalText{margin-bottom: 5px;}
+}
+
+/* Iphone 5 */
+@media only screen and (max-width: 320px) {
+}
+
+
+
+/* Height */
+@media(max-height: 600px){
+    .homepageBanner .inner-container .text-container h1{font-size: 36px;}
+    .homepageBanner .inner-container .text-container h2{font-size: 24px;}
+    .homepageBanner .inner-container .text-container .button-container{width: 90%; margin-top: 20px;}
+    .homepageBanner .inner-container .img-container{width: 50%;}
+
+    .max-container .container .head-text .normalText{margin-bottom: 20px;}
+    .max-container .container .head-text h1{margin-bottom: 20px; padding-bottom: 20px;}
+    
+    .max-container .container .head-text .article-button{margin-bottom: 20px;}
+    .max-container .container .head-text{padding-top: 20px;}
+    .max-container .container .head-text .article-button a{padding: 5px 0;}
+
+    .eco-head nav .menu-list .container-list .top .right{max-height: 40vh;}
+    .homepageBanner .inner-container .text-container{margin: 10px 0;}
+    .eco-head nav .menu-list .container-list .ads{top: unset; bottom: 105%; z-index: 99;}
+    .eco-head nav .menu-list .container-list .top .right .item a img{aspect-ratio: 1.8/1;}
+}

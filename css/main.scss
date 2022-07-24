@@ -1,0 +1,449 @@
+/* Fonts */
+/* Make sure to use only web-safe font (google fonts and convert to web fonts)*/
+
+@font-face {
+    font-family: 'econ-sans';
+    src: url('fonts/EconSansOS-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'econ-sans-light';
+  src: url('fonts/EconSansOS-Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'econ-sans-bold';
+  src: url('fonts/EconSansOS-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'zirkon-black';
+  src: url('fonts/GTZirkon-Black.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'zirkon-bold';
+  src: url('fonts/GTZirkon-Bold.ttf') format('truetype');
+}
+
+// Fonts
+$zirkonBold : 'zirkon-bold';
+$zirkonBlack : 'zirkon-black';
+$econM : 'econ-sans';
+$econB: 'econ-sans-bold';
+$econL: 'econ-sans-light';
+
+
+/* Reset */
+* {outline: none; box-sizing: border-box; padding: 0; margin: 0;}
+
+/* Colors */
+$white: #fff;
+$black: #000;
+$bgWhite: #f8f8fa;
+$bgGray: #e7e7f5;
+$bgGray2: #aeaeae;
+$bgBlue: #2e308e;
+$btnBlue: #7372d7;
+$fontDarkBlue: #0d0d47; 
+$fontLightBlue2: #2e3089;
+$fontLightBlue: #6b6b82;
+$fontGray: #7e7e7e;
+
+
+h1 { font-family: $zirkonBlack; } 
+h2 { font-family: $zirkonBlack; }
+h3 { font-family: $zirkonBlack; }
+h4 { font-family: $zirkonBlack; }
+h5 { font-family: $zirkonBlack; }
+h6 { font-family: $zirkonBlack; }
+p, li, a { font-family: $econM; font-size: 18px;}
+
+.eco-head{
+  width: 100%; padding: 0 32px; display: flex; justify-content: center; align-items: center; height: 85px;  left: 0;
+  background-color: white; z-index: 999; position: fixed; top: 0; box-shadow: 0 0 10px 0 rgb(204, 204, 204);
+  nav{width: 100%; display: flex; align-items: center; justify-content: space-between; 
+      margin: auto; padding: 10px 0;
+    .logo-economist{
+      img{width: 120px; height: auto;}
+    }
+    .menu{ display: none;
+      p{font-size: 18px; font-family: $econB;}
+    }
+    
+    .menu-list{display: flex; flex-direction: column; list-style: none; margin: 0 ; left: 0; top: 85px;  position: absolute; width: 100%; justify-content: flex-end;
+     background-color: white; transform: rotateX(90deg); transition: .3s ease-in-out; transform-origin: top;
+      .container-list{width: 100%; max-width: 1440px; margin: auto; position: relative;
+        .ads{position: absolute; left: 0; width: 100%; top: 105%; background-color: white; display: none; font-family: $econM; font-size: 14px; padding: 10px;
+          .close{position: absolute; height: 15px; width: 15px; right: 5px; top: 5px; cursor: pointer;}
+        }
+        .top{display: flex; justify-content: space-between;  padding: 20px 0; align-items: flex-start;
+          .left{width: 43%; display: flex; justify-content: space-between;
+            img{height: 55px;}
+            .clientLogo{height: 30px;}
+            a{color: $fontLightBlue; font-size: 16px; transition: .2s linear;
+              i{margin-right: 5px;}
+            }
+            p{font-size: 14px;}
+            a:hover{color: $btnBlue;}
+          }
+          .right{width: 53%; display: flex; flex-wrap: wrap; height: 100%; align-items: flex-start; max-height: 60vh; overflow-y: auto;
+            &::-webkit-scrollbar {
+              width: 5px;
+            }
+            &::-webkit-scrollbar-track {
+              background: #f1f1f1;
+            }
+            &::-webkit-scrollbar-thumb {
+              background:$btnBlue;
+            }
+            &::-webkit-scrollbar-thumb:hover {
+              background: $fontDarkBlue;
+            }
+            .item{width: 49%; margin-bottom: 10px;
+              a{display: flex; position: relative; align-items: flex-start;
+                img{width: 33%; aspect-ratio: 1.8/1;  object-fit: cover; position: relative; z-index: 2;}
+                div{ position: relative; z-index: 2; padding: 5px 0; padding-left: 10px;
+                  .p{font-size: 13px; color: $fontLightBlue;}
+                  h5{color: $fontDarkBlue; font-size: 16px;}
+                }
+              }
+              a::after{content: ''; transition: .3s linear; position: absolute; height: 100%; width: 0; left: 0; top: 0; background-color: $bgBlue;}
+              a:hover{
+                &::after{width: 100%;}
+                div{
+                  .p{ color: rgb(223, 223, 223);}
+                  h5{color: white;}
+                }
+              }
+            }
+            .item:nth-child(odd){margin-right: 1%;}
+          }
+        }
+      }
+    }
+    .menu-list.toggle-menu{height: auto; transform: rotateX(0);}
+
+    .button{height: 25px; width: 30px; position: relative; cursor: pointer;
+      .line{width: 100%; height: 2px; background-color: black; position: absolute;}
+      .top{left: 0; top: 0; transition: .5s ease;}
+      .center{left: 0; top: 50%; transform: translateY(-50%); transition: .5s ease;}
+      .bottom{left: 0; bottom: 0; transition: .5s ease;}
+
+      .rotate-top{ transform: rotate(50deg); transform-origin: left;}
+      .rotate-bottom{transform: rotate(-50deg); transform-origin: left;}
+      .translate-center{left: -50%; opacity: 0;}
+    }
+  }
+}
+.mt{margin-top: 86px;}
+.max{max-width: 1440px; width: 95%; margin: auto;}
+.homepageBanner{width: 100%; overflow: hidden; background-color: $bgGray; margin-bottom: clamp(50px, 20vw, 100px);
+  background-position-x: 90%; background-position-y: 40px; background-size: 45%; background-repeat: no-repeat;
+  .inner-container{width: 95%; margin: auto; display: flex; flex-wrap: wrap; align-items: center;
+    .text-container{width: 50%; padding-right: 10px; margin: 50px 0;
+      h2{font-size: clamp(22px, 2.8vw, 48px); line-height: 1.1; letter-spacing: -2px; color: $fontDarkBlue;}
+      h1{font-size: clamp(28px, 3.5vw, 60px); line-height: 1.1; margin-bottom: 20px; color: $fontDarkBlue;}
+      p{font-size: 18px; width: 80%; color: $fontLightBlue; }
+      .button-container{margin-top: 50px; display: flex; justify-content: space-between; width: 80%; background-color: white; border-radius: 50px; padding: clamp(10px, 1vw, 20px); box-shadow: 0 0 15px 0 rgba(189, 189, 189, 0.456);
+        a{display: flex; transition: .2s linear; text-decoration: none; align-items: center; width: 48%; padding-right: 10px;}
+        .icon{width: 20%; aspect-ratio: 1/1; margin-right: 10px; background-color: $btnBlue; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+          img{width: 70%; height: auto;}
+        }
+        div{ width: 80%;
+          p{width: 100%; font-size: 14px;  color: $bgGray2;}
+          h5{font-size: 16px; color: $fontLightBlue2;}
+        }
+        a:hover{background-color: $btnBlue; border-radius: 50px;
+          div{ 
+            p{color: white;}
+            h5{color: $bgWhite;}
+          }
+        }
+      }
+    }
+    .img-container{width: 45vw; margin-right: -10%; margin-top: -50px;
+      img{width: 100%;}
+    }
+  }
+  .commision{width: 95%; max-width: 1440px; margin: auto; display: flex; justify-content: flex-end; align-items: center; padding: 20px 0;
+    a{display: flex; align-items: center; text-decoration: none;
+      p{margin-right: 10px; color: $fontDarkBlue; font-size: 14px;}
+      img{height: 30px;}
+    }
+  }
+  .map-mobile{ display: none;
+    img{width: 100%;}
+  }
+}
+a{text-decoration: none !important;}
+.text-image-container{position: relative; display: inline-block; width: 100%;}
+.text-image{display: flex; justify-content: space-between; align-items: center; margin-bottom: clamp(50px, 20vw, 100px);
+  .backgroundObject-right{position: absolute; right: 0; top: -100%; width: 40%; height: auto; z-index: -1; opacity: .4;}
+  .backgroundObject-left{position: absolute; left: 0; bottom: 0; width: 60%; z-index: -1;}
+  .text-container{width: 40%;
+    p{font-size: 18px; color: $fontLightBlue; margin-bottom: 20px;}
+    .mini-label{ letter-spacing: 2px; color: $fontLightBlue2; font-size: 16px;}
+    h3{font-size: clamp(24px, 5vw, 48px); color: $fontDarkBlue; margin-bottom: 20px;}
+    ul{list-style: none; padding: 0; margin-bottom: 30px; display: flex; flex-wrap: wrap;
+      li{display: flex; width: 50%; align-items: center; margin-bottom: 10px; font-size: 18px; font-family: $econB; color: $fontDarkBlue;
+        img{margin-right: 5px;}
+      }
+    }
+    a{display: inline-block; font-size: 14px; transition: .2s linear; padding: 10px 50px; border-radius: 50px; background-color: $btnBlue; color: white;
+      span{margin-left: 10px;}
+    }
+    
+    a:hover{box-shadow: 0 0 15px 0 #7472d7a7;}
+  }
+  .image-container{width: 55%;
+    img{width: 100%; height: auto; border-radius: 20px; overflow: hidden;}
+  }
+}
+.text-image.img-right{
+  .text-container{order: 1;}
+  .image-container{order: 2;}
+}
+.webinar{width: 100%; background-image: url(../images/02_Cognizant_Hub_Index_P2-bg_04.jpg);
+  background-position: center; background-size: cover; background-repeat: no-repeat;
+  .container{width: 95%; max-width: 1000px; margin: auto; padding: clamp(30px, 10vw, 80px) 0; display: flex; flex-direction: column; align-items: center;
+    .when, .normalText, .mini-label{text-align: center; color: white; margin-bottom: 15px;}
+    h3{text-align: center; letter-spacing: -2px; color: white; font-size: clamp(24px, 5vw, 48px); margin-bottom: 15px;}
+    .mini-label{font-size: 18px; letter-spacing: 2px; color: #49a3df; margin-bottom: 15px;}
+    ul{list-style: none; width: 100%; display: flex; padding: 0; margin: 50px 0;
+      li{width: 25%; padding: 0 5px; display: flex; flex-direction: column;
+        img{width: 150px; margin-bottom: 10px;}
+        h4{font-size: 22px; padding-bottom: 10px; color: white; margin-bottom: 10px; position: relative;}
+        h4:after{content: ''; position: absolute; left: 0; bottom: 0; height: 2px; width: 40px; background-color: white;}
+        p{color: #c9c8f0; font-size: 14px;}
+        .position{height: 30px; font-size: 18px; color: white;}
+      }
+    }
+    a{display: inline-block; background-color: #e5bf38; transition: .2s linear; color: black; padding: 10px 30px; border-radius: 50px;}
+    a:hover{box-shadow: 0 0 15px 0 #e5c0389e;}
+  }
+}
+
+.articleCards{ padding: clamp(30px, 5vw, 80px) 0; position: relative; overflow: hidden; background-color: white;
+  .map-bg{position: absolute; top: 0%; left: 0; width: 55%; z-index: 1;}
+  .container{ display: flex; justify-content: space-between; flex-wrap: wrap; align-items: center; z-index: 2; position: relative;
+    .text-container{width: 40%;
+      p{font-size: 18px; color: $fontLightBlue;}
+      .mini-label{ letter-spacing: 2px; margin-bottom: 15px; color: $fontLightBlue2; font-size: 16px;}
+      h3{font-size: clamp(24px, 5vw, 48px); color: $fontDarkBlue; margin-bottom: 15px;}
+    }
+    .card{width: 19%; margin-bottom: 20px; box-shadow: 0 0 15px 0 rgb(227, 227, 227); border: 1px solid rgb(227, 227, 227); border-radius: 10px; padding: 20px; background-color: rgba(255, 255, 255, 0.199);
+      .top{display: flex; justify-content: space-between; margin-bottom: 150px;
+        span{font-family: $econM; color: $bgGray2; font-size: 14px;}
+      }
+      h4{font-size: clamp(20px, 3vw, 40px); margin-bottom: 20px;}
+      p{font-size: 14px; color: $fontLightBlue; margin-bottom: 20px;}
+      a{display: inline-block; transition: .2s linear; padding: 7px 40px; font-size: 16px; color: white; border-radius: 50px; background-color: $btnBlue;}
+      a:hover{box-shadow: 0 0 10px 0 $btnBlue;}
+    }
+  }
+}
+html{scroll-behavior: smooth;}
+.sponsorPerspective{width: 100%; background-color: white; position: relative;
+  .back-to-top{position: absolute; bottom: 20px; right: 20px; background-color: white; color: $fontDarkBlue; font-family: $econM;
+    padding: 10px 20px; padding-top: 12px; line-height: 1; border-radius: 50px; font-size: 14px; transition: .2s linear;  cursor: pointer;
+  }
+  .back-to-top:hover{background-color: $btnBlue; box-shadow: 0 0 10px 0 $btnBlue; color: white;}
+  .container{padding: clamp(30px, 5vw, 70px) 0;
+    .head{width: 100%; background-color: #ededed; padding: 25px; position: relative;
+      svg{cursor: pointer;}
+      p{margin: 0; font-size: 15px;}
+      .ads{position: absolute; display: none; width: 100%; top: 100%; background-color: white; left: 0; padding: 20px; font-family: $econM;
+        img{width: 20px; height: 20px; position: absolute; top: 5px; right: 5px; cursor: pointer;}
+        font-family: $econM;
+      }
+    }
+    .body{display: flex; width: 100%;
+      .text-container{width: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; background-image: linear-gradient(45deg, #d9d9d9, #e7e7e7);
+        padding: 50px 0;
+        div{width: 60%;
+          h2{font-size: clamp(20px, 3vw, 30px); letter-spacing: -1.5px; margin-bottom: 20px;}
+          p{ margin-bottom: 20px; color: $fontLightBlue;}
+          a{display: inline-block; cursor: pointer; transition: .2s linear; padding: 10px 50px; background-color: #2e308e; color: white; font-size: 16px; border-radius: 50px;}
+          a:hover{box-shadow: 0 0 10px 0 $btnBlue;}
+        }
+      }
+      img{width: 50%; height: auto; object-fit: cover;}
+    }
+    .body.left{
+      .text-container{order: 2;}
+      img{order: 1; object-position: left;}
+    }
+  }
+}
+
+
+.socialIcons{position: fixed; right: 2%; top: 50%; transform: translateY(-50%); z-index: 99;
+  ul{list-style: none; padding: 25px 5px; box-shadow: 0 15px 15px 0 rgba(169, 169, 169, 0.433); border-radius: 50px; background-color: white;
+    li { transition: .2s linear; height: 30px; aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center; border-radius: 50%; padding-top: 5px;
+      a{ transition: .2s linear; color: $btnBlue; font-size: 18px; margin: 0; }
+    }
+    li:hover{background-color: $btnBlue;
+      a{ color: white; }
+    }
+  }
+}
+
+.innerpageBanner{width: 100%; height: 35vh; max-height: 500px; min-height: 300px;
+  aside{width: 100%; height: 100%;
+    img{width: 100%; height: 100%; object-fit: cover;}
+  }
+}
+
+.buttonLink{display: inline-block; transition: .2s linear; padding: 10px 25px; font-size: 14px; color: white; line-height: 1; border-radius: 50px; background-color: $btnBlue;}
+.buttonLink:hover{box-shadow: 0 0 10px 0 $btnBlue;}
+.buttonLink2{display: inline-block; transition: .2s linear; padding: 15px 30px; font-size: 16px; color: white; 
+  line-height: 1; border-radius: 50px; background-color: $fontDarkBlue;}
+.buttonLink2:hover{box-shadow: 0 0 10px 0 $btnBlue;}
+
+.max-container{width: 100%; position: relative; margin-top: -220px;
+  .bg-left{position: absolute; left: 0; top: 20vh; width: 40%; z-index: 99;}
+  .bg-right{position: absolute; right: 0; top: 40%; transform: translateY(-50%); width: 40%; opacity: .8;}
+  .container{width: 90%; max-width: 1100px; margin: auto; position: relative; z-index: 9; overflow: hidden;
+    .head-text{ margin-top: 0; padding: clamp(30px, 3vw, 50px); border-radius: 10px; position: relative; overflow: hidden;
+      padding-bottom: 0; position: relative; display: flex; background-color: white;
+      flex-direction: column; align-items: center; text-align: center;
+      .article-button{ display: flex; width: 100%; margin-bottom: 50px; justify-content: space-between;
+        a{display: inline; display: flex; align-items: center; justify-content: center; transition: .2s linear; font-size: 16px; width: 32%; background-color: #f0eff5; color: #acacac; padding: 10px; line-height: 1; border-radius: 10px;}
+        a.active{color: white; background-color: $btnBlue; box-shadow: 0 0 10px 0 $btnBlue;}
+        a:hover{color: white; background-color: $btnBlue; box-shadow: 0 0 10px 0 $btnBlue;}
+      }
+      h1{font-size: clamp(28px, 3.5vw, 48px); color: $fontDarkBlue; position: relative; letter-spacing: -2px; padding-bottom: 40px; margin-bottom: 40px;}
+      h1::after{content: ''; position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); height: 5px; width: 15%; background-color: $btnBlue; border-radius: 3px;}
+      .mini-label{margin-bottom: 10px; letter-spacing: 3px; color: $fontLightBlue2; }
+      .normalText{margin-bottom: 40px; color: $fontLightBlue; font-size: 18px;}
+      .commisioned{width: 100%; display: flex; justify-content: flex-end; padding: 20px 0;
+        a{display: flex; align-items: center; color: $fontLightBlue2; font-size: 14px;
+          p{margin-right: 10px; font-size: 14px;}
+        }
+      }
+    }
+    .body-container{padding: clamp(30px, 3vw, 50px); padding-top: 0; margin-top: 20px;
+      .img{width: 100%; height: auto; margin-bottom: clamp(20px, 1.5vw, 30px); border-radius: 15px;}
+      img{width: 100%; height: auto; margin-bottom: clamp(20px, 1.5vw, 30px);}
+      .Infographic-img{box-shadow: 0 8px 10px 0 #abaadc87;}
+      p{font-size: 16px; color: $fontLightBlue; margin-bottom: clamp(20px, 1.5vw, 30px); width: unset;}
+      h2{color: $btnBlue; margin-bottom: clamp(20px, 1.5vw, 30px); font-size: clamp(24px, 3vw, 28px); letter-spacing: -1px;}
+      .image-x-list{display: flex; margin-bottom: clamp(20px, 1.5vw, 30px); justify-content: space-between;
+        .image-container{width: 35%;}
+        .text-container{width: 60%;
+          ul{list-style: none; padding: 20px; background-color: #fafafa; width: 100%; border-radius: 10ox; margin-bottom: 20px;
+            li{padding-left: 20px; position: relative; margin-bottom: 15px;
+              p{margin: 0; padding: 0; line-height: 1;}
+              .name{font-size: 16px; margin-bottom: 2px;}
+              .description{font-size: 14px;}
+            }
+            li::after{position: absolute; content: ''; height: 10px; width: 10px; left: 0; top: 0; background-color: $btnBlue;}
+          }
+          a{display: inline-block; transition: .2s linear; padding: 10px 25px; font-size: 14px; color: white; line-height: 1; border-radius: 50px; background-color: $btnBlue;}
+          a:hover{box-shadow: 0 0 10px 0 $btnBlue;}
+        }
+      }
+      .text-with-card{ overflow: auto; margin-bottom: clamp(20px, 1.5vw, 30px);
+        .card-container{border-top: 4px solid $btnBlue; box-shadow: 0 8px 10px 0 #abaadc87; margin-left: 15px; margin-bottom: 10px;
+          background-color: #fafafa; height: 200px; width: 450px; 
+          display: flex; flex-direction: column ; align-items: center; justify-content: center;
+          float: right; overflow: auto;
+          .text{display: flex; margin-bottom: 10px; align-items: center; width: 80%;
+            h3{color: $btnBlue; font-size: 32px; text-align: end; width: 25%;}
+            p{margin: 0; width: 75%; color: $fontGray; font-size: 16px; padding-left: 5px;}
+          }
+          .text:nth-last-child(1){margin-bottom: 0;}
+        }
+        .card-container-2{border-top: 4px solid $btnBlue; box-shadow: 0 8px 10px 0 #abaadc87; margin-left: 15px; margin-bottom: 20px;
+          background-color: #fafafa; width: 100; max-width: 450px;
+          display: flex; flex-direction: column ; align-items: center; justify-content: center;
+          float: right; overflow: auto; padding: 45px;
+          *{margin: 0; padding: 0;}
+          ul{list-style: none; display: flex; width: 100%; padding-bottom: 10px; margin-bottom: 10px; border-bottom: 1px solid $fontGray;
+            li{ width: 50%;
+              h1{font-size: clamp(24px, 2.5vw, 42px); color: $btnBlue;}
+              p{color: $btnBlue;}
+            }
+          }
+          p{font-size: 14px;}
+        }
+      }
+      .text-x-image{width: 100%; overflow: auto; margin-bottom: clamp(20px, 1.5vw, 30px);
+        img{float: right; width: 45%; margin-left: 5%; border-radius: 15px; border: 1px solid $bgGray;}
+      }
+      .key-findings{ width: 100%; margin-bottom: clamp(20px, 1.5vw, 30px);
+        div{ padding: 10px 0; border-bottom: 2px solid $btnBlue; display: flex;
+          h1{font-size: clamp( 48px, 5vw,64px); color: $btnBlue; margin-right: 10px; line-height: 1; margin-top: -5px;}
+          h5{font-size: clamp(24px, 2vw, 28px); color: $fontDarkBlue; line-height: 1.1; width: 50%; padding-right: 15px;}
+          p{width: 50%;}
+        }
+        div:nth-last-child(1){border: none;}
+      }
+      .quote-container{background-color: #fafafa; width: 90%; margin: auto; box-shadow: 0 8px 10px 0 #abaadc87; margin-bottom: clamp(20px, 1.5vw, 30px);
+        .text-container{padding: 40px; padding-top: 0;
+          *{padding: 0; margin: 0;}
+          h3{font-size: clamp(20px, 3vw,28px); margin-bottom: 40px; color: $fontDarkBlue;}
+          .name{ display: flex; border-bottom: 2px solid $btnBlue; padding-bottom: 10px; flex-wrap: wrap;
+            p{color: $fontDarkBlue; padding-right: 10px;}
+            span{width: 100%; padding-left: 10px; padding-top: 2px; border-left: 1px solid $fontLightBlue; width: auto; font-size: 14px; color: $fontLightBlue; display: inline-block; font-family: $econM;}
+          }
+        }
+      }
+      .sponsor-card{width: 100%; background-color: #fafafa; box-shadow: 0 5px 10px 0 #abaadc87;  margin-bottom: clamp(20px, 1.5vw, 30px); border-left: 3px solid $btnBlue;
+        .head{display: flex; justify-content: space-between; padding: 15px 20px; border-bottom: 1px solid $bgGray;
+          *{margin: 0; padding: 0;}
+          span{font-family: $econM; font-size: 14px; line-height: 1; color: $fontGray; padding-top: 4px;}
+          img{height: 20px; width: auto;}
+        }
+        .body{padding: 30px 60px;
+          h3{font-size: clamp(22px, 3vw, 24px); color: $fontDarkBlue; margin-bottom: 20px;}
+          p{margin-bottom: 20px;}
+          p:nth-last-child(1){margin-bottom: 0;}
+        }
+      }
+      .flourish-field{ margin: auto; margin-bottom: clamp(20px, 1.5vw, 30px); width: 80%; }
+      .full{width: 100%;}
+      .mb{margin-bottom: clamp(40px, 3vw, 60px);}
+      .carousel-container{margin: 100px 0; margin-bottom: 50px;
+
+        .slick-track{
+          display: flex !important;
+        }
+        .slick-slide{
+          height: inherit !important;
+        }
+        .slick-slide {
+          margin: 0 27px;
+        }
+        .slick-list {
+          margin: 0 -27px;
+        }
+        .container{ width: 100%;
+          .exploreMore{
+            text-align: center; color: $fontDarkBlue; 
+            margin-bottom: clamp(40px, 4vw, 55px); font-size: clamp(24px, 3vw, 32px);
+          }
+          .carousel-Articles{
+            li{
+              a{ display: block; padding-bottom: 50px; position: relative; height: 100%; overflow: visible;
+                img{width: 100%; aspect-ratio: 2/1; object-fit: cover; border-radius: 20px;}
+                h4{color: $fontDarkBlue; margin-bottom: clamp(20px, 1.5vw, 30px); font-size: clamp(24px, 3vw, 28px); letter-spacing: -1px;}
+                div{font-size: 16px; transition: .2s linear; padding-top: 2px; position: absolute; bottom: 10px; display: flex; justify-content: center; align-items: center; color: white; width: 250px; height: 40px; border-radius: 50px; background-color: $btnBlue;
+                  i{margin-left: 10px;}
+                }
+              }
+              a:hover > div{ box-shadow: 0 0px 10px 0 $btnBlue; }
+            }
+          }
+        }
+      }
+      .mobileAds{display: none;}
+    }
+  }
+}
+
+.embedPopUp{position: fixed; overflow: hidden; transform: rotateX(90deg); transform-origin: top; transition: .3s linear; top: 0; left: 0; width: 100%; background-color: rgba(0, 0, 0, 0.808); height: 100vh; z-index: 99999; display: flex; justify-content: center; align-items: center;
+  .popUp-container{width: 80%; height: 80%; position: relative;
+    .close{position: absolute; cursor: pointer; left: 100%; transform: rotate(45deg); top: 0; padding: 0 10px; font-size: 45px; line-height: 60%; color: white;}
+    .iframeCon{width: 100%; height: 100%;}
+    iframe{width: 100%; height: 100%;}
+  }
+}
+.embed-toggle{transform: rotateX(0);}
