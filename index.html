@@ -1,498 +1,623 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Project Title</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/responsive.css">
-        <link rel="stylesheet" href="css/slick.css"/>
-        <link rel="stylesheet" href="css/slick-theme.css"/>
-        <link rel="stylesheet" href="css/fontawesome.css">
-		<link rel="stylesheet" href="css/aos.css">
-        <link rel="stylesheet" href="css/footer.css">
-    </head>
-    <body style="background-color: #e7e7f5;">
-
-        <aside class="socialIcons">
-            <ul>
-                <li><a href="" target=""><i class="fab fa-twitter"></i></a></li>
-                <li><a href="" target=""><i class="fab fa-linkedin"></i></a></li>
-                <li><a href="" target=""><i class="fab fa-facebook"></i></a></li>
-                <li><a href="" target=""><i class="fas fa-envelope"></i></a></li>
-            </ul>
-        </aside>
-        <div class="embedPopUp">
-            <div class="popUp-container">
-                <div class="close" onclick="closeModal(this)">+</div>
-                <div class="iframeCon" style="width: 100%;"></div>
-            </div>
+  <head>
+    <meta charset="utf-8" />
+    <title>Project Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/slick-theme.css" />
+    <link rel="stylesheet" href="css/fontawesome.css" />
+    <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+  </head>
+  <body style="background-color: #e7e7f5">
+    <aside class="socialIcons">
+      <ul>
+        <li>
+          <a href="" target=""><i class="fab fa-twitter"></i></a>
+        </li>
+        <li>
+          <a href="" target=""><i class="fab fa-linkedin"></i></a>
+        </li>
+        <li>
+          <a href="" target=""><i class="fab fa-facebook"></i></a>
+        </li>
+        <li>
+          <a href="" target=""><i class="fas fa-envelope"></i></a>
+        </li>
+      </ul>
+    </aside>
+    <div class="embedPopUp">
+      <div class="popUp-container">
+        <div class="close" onclick="closeModal(this)">+</div>
+        <div class="iframeCon" style="width: 100%"></div>
+      </div>
+    </div>
+    <header class="eco-head">
+      <nav class="max">
+        <div class="logo-economist">
+          <a href="#" target="_blank" onclick="gaEvent()"
+            ><img src="images/sample-logo.png" alt=""
+          /></a>
         </div>
-        <header class="eco-head">
-            <nav class="max">
-                <div class="logo-economist">
-                    <a href="#" target="_blank" onclick="gaEvent()"><img src="images/sample-logo.png" alt=""></a>
-                </div>
-            
-                <div class="button" onclick="toggleMenu()">
-                    <div class="line top"></div>
-                    <div class="line center"></div>
-                    <div class="line bottom"></div>
-                </div>
 
-                <div class="menu-list">
-                    <div class="container-list">
-                        <div class="top">
-                            <div class="left">
-                                <a href="index.html"><i class="fas fa-home"></i>Home</a>
-                                <a href="#" target="_blank"><img src="images/economist-impact.png" alt=""></a>
-                            </div>
-                            <div class="right">
-                                <div class="item">
-                                   <a href="whitepaper.html">
-                                        <img src="images/01_Cognizant_Hub_Index_P1_03.png" alt="">
-                                        <div>
-                                            <p class="p">Whitepaper</p>
-                                            <h5>Aussie rules: how Australian business can lead the future</h5>
-                                        </div>
-                                   </a>
-                                </div>
-                                <div class="item">
-                                    <a onclick="openModal(this)" style="cursor: pointer;"
-                                        data-iframe="<iframe src='https://www.facebook.com/' frameborder='0'></iframe>">
-                                        <img src="images/infographic-img_05.png" alt="">
-                                        <div>
-                                            <p class="p">The Future-Ready Business</p>
-                                            <h5>Benchmark tool</h5>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="item">
-                                    <a href="#">
-                                        <img src="images/webinar.JPG" alt="">
-                                        <div>
-                                            <p class="p">Webinar</p>
-                                            <h5>Healthcare Insight Hour</h5>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="item">
-                                    <a href="article.html">
-                                        <img src="images/03_Cognizant_Hub_whitepaper_05.png" alt="">
-                                        <div>
-                                            <p class="p">Article</p>
-                                            <h5>Industry cuts:Mining</h5>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="item">
-                                    <a href="article.html">
-                                        <img src="images/03_Cognizant_Hub_whitepaper_13.png" alt="">
-                                        <div>
-                                            <p class="p">Article</p>
-                                            <h5>Industry cuts:Insurance</h5>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="item">
-                                    <a href="article.html">
-                                        <img src="images/01_Cognizant_Hub_Index_P1_03.png" alt="">
-                                        <div>
-                                            <p class="p">Article</p>
-                                            <h5>Industry cuts:BFS</h5>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+        <div class="button" onclick="toggleMenu()">
+          <div class="line top"></div>
+          <div class="line center"></div>
+          <div class="line bottom"></div>
+        </div>
+
+        <div class="menu-list">
+          <div class="container-list">
+            <div class="top">
+              <div class="left">
+                <a href="index.html"><i class="fas fa-home"></i>Home</a>
+                <a href="#" target="_blank"
+                  ><img src="images/sample-logo.png" alt=""
+                /></a>
+              </div>
+              <div class="right">
+                <div class="item">
+                  <a href="whitepaper.html">
+                    <img src="images/01_Cognizant_Hub_Index_P1_03.png" alt="" />
+                    <div>
+                      <p class="p">Whitepaper</p>
+                      <h5>
+                        Aussie rules: how Australian business can lead the
+                        future
+                      </h5>
                     </div>
-
-                    <div class="bottom" style="background-color: #ededed;">
-                        <div class="container-list">
-                            <div class="ads sponsored-content-text1" id="sponsored-text-container1">
-                                <img src="images/close-icon.png" id="close-sponsored-text1" alt="" class="close">
-                                Our sponsors provide financial support for this website. We endeavour to give our sponsors the opportunity to communicate their messages in placements that are clearly demarcated. Such placements are clearly labelled as Advertisement, Advertisement feature, Sponsored content, Sponsor's perspective, "Brought to you by" the sponsor or words to that effect. Occasionally, we group together content from various sources relating to the same topic. In cases where content from The Economist Group is included, it will be clearly labelled as from The Economist or Economist Intelligence Unit. At all times there is a clear division between our editorial staff and sponsors, and sponsors are never allowed to influence what our editorial teams write. Sponsors are solely responsible for their content, and their views do not necessarily reflect those of The Economist.
-                            </div>
-                            <div class="top">
-                                <div class="left center mb">
-                                    <p id="toggle-sponsored-text1" style="cursor: pointer;">Advertisement feature &nbsp;<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="info-circle" class="svg-inline--fa fa-info-circle fa-w-16 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"></path></svg></p>
-                                    <a href="#" target="_blank" onclick="gaEvent"><img src="images/01_Cognizant_Hub_Index_P1_15.png" class="clientLogo" alt=""></a>
-                                    
-                                </div>
-                                <div class="right">
-                                    <div class="item full" style="margin-bottom: 0;">
-                                        <a href="infographics.html">
-                                            <img src="images/01_Cognizant_Hub_Index_P1_03.png" alt="">
-                                            <div>
-                                                <p class="p">Sponsor's perspective</p>
-                                                <h5>Country Infographic</h5>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a
+                    onclick="openModal(this)"
+                    style="cursor: pointer"
+                    data-iframe="<iframe src='https://www.facebook.com/' frameborder='0'></iframe>"
+                  >
+                    <img src="images/infographic-img_05.png" alt="" />
+                    <div>
+                      <p class="p">The Future-Ready Business</p>
+                      <h5>Benchmark tool</h5>
                     </div>
-
+                  </a>
                 </div>
-
-            </nav>
-
-            <div class="line-animation"></div>
-
-        </header>
-
-        <header class="homepageBanner" style="background-image: url(images/map_03.png);">
-
-            <div class="mt"></div>
-
-            <section class="inner-container max">
-                <div class="text-container">
-                    <h2>Advance Australia Prepare:</h2>
-                    <h1>How to make Australian Business future-ready</h1>
-                    <p>
-                        Healthcare lags behind other industries on the Future-Ready Business Benchmark. The industry's Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                        Accusantium cum nulla iure cupiditate deserunt iste beatae autem culpa delectus tenetur?
-                    </p>
-                    <div class="button-container">
-                        <a href="whitepaper.html">
-                            <div class="icon"><img src="images/01_Cognizant_Hub_Index_P1_09.png" alt=""></div>
-                            <div>
-                                <p>Healthcare Industry Profile</p>
-                                <h5>Whitepaper</h5>
-                            </div>
-                        </a>
-                        <a onclick="openModal(this)" style="cursor: pointer;"
-                        data-iframe="<iframe src='https://www.facebook.com/'' frameborder='0'></iframe>">
-                            <div class="icon"><img src="images/01_Cognizant_Hub_Index_P1_06.png" alt=""></div>
-                            <div>
-                                <p>The Future-Ready Business</p>
-                                <h5>Benchmarking tool</h5>
-                            </div>
-                        </a>
+                <div class="item">
+                  <a href="#">
+                    <img src="images/webinar.JPG" alt="" />
+                    <div>
+                      <p class="p">Webinar</p>
+                      <h5>Healthcare Insight Hour</h5>
                     </div>
+                  </a>
                 </div>
-            </section>
-            <section class="commision">
-                <a href="#" target="_blank" onclick="gaEvent"><p>Commisioned by</p> <img src="images/01_Cognizant_Hub_Index_P1_15.png" alt=""></a>
-            </section>
-            <section class="map-mobile max">
-                <img src="images/map_03.png" alt="">
-            </section>
-        </header>
+                <div class="item">
+                  <a href="article.html">
+                    <img
+                      src="images/03_Cognizant_Hub_whitepaper_05.png"
+                      alt=""
+                    />
+                    <div>
+                      <p class="p">Article</p>
+                      <h5>Industry cuts:Mining</h5>
+                    </div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="article.html">
+                    <img
+                      src="images/03_Cognizant_Hub_whitepaper_13.png"
+                      alt=""
+                    />
+                    <div>
+                      <p class="p">Article</p>
+                      <h5>Industry cuts:Insurance</h5>
+                    </div>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="article.html">
+                    <img src="images/01_Cognizant_Hub_Index_P1_03.png" alt="" />
+                    <div>
+                      <p class="p">Article</p>
+                      <h5>Industry cuts:BFS</h5>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
 
+          <div class="bottom" style="background-color: #ededed">
+            <div class="container-list">
+              <div
+                class="ads sponsored-content-text1"
+                id="sponsored-text-container1"
+              >
+                <img
+                  src="images/close-icon.png"
+                  id="close-sponsored-text1"
+                  alt=""
+                  class="close"
+                />
+                Our sponsors provide financial support for this website. We
+                endeavour to give our sponsors the opportunity to communicate
+                their messages in placements that are clearly demarcated. Such
+                placements are clearly labelled as Advertisement, Advertisement
+                feature, Sponsored content, Sponsor's perspective, "Brought to
+                you by" the sponsor or words to that effect. Occasionally, we
+                group together content from various sources relating to the same
+                topic. In cases where content from The Economist Group is
+                included, it will be clearly labelled as from The Economist or
+                Economist Intelligence Unit. At all times there is a clear
+                division between our editorial staff and sponsors, and sponsors
+                are never allowed to influence what our editorial teams write.
+                Sponsors are solely responsible for their content, and their
+                views do not necessarily reflect those of The Economist.
+              </div>
+              <div class="top">
+                <div class="left center mb">
+                  <p id="toggle-sponsored-text1" style="cursor: pointer">
+                    Advertisement feature &nbsp;<svg
+                      aria-hidden="true"
+                      focusable="false"
+                      data-prefix="fas"
+                      data-icon="info-circle"
+                      class="svg-inline--fa fa-info-circle fa-w-16"
+                      role="img"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 512 512"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"
+                      ></path>
+                    </svg>
+                  </p>
+                  <a href="#" target="_blank" onclick="gaEvent"
+                    ><img
+                      src="images/01_Cognizant_Hub_Index_P1_15.png"
+                      class="clientLogo"
+                      alt=""
+                  /></a>
+                </div>
+                <div class="right">
+                  <div class="item full" style="margin-bottom: 0">
+                    <a href="infographics.html">
+                      <img
+                        src="images/01_Cognizant_Hub_Index_P1_03.png"
+                        alt=""
+                      />
+                      <div>
+                        <p class="p">Sponsor's perspective</p>
+                        <h5>Country Infographic</h5>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
 
-        <section class="text-image-container">
-            <section class="text-image max">
-                <div class="image-container">
-                    <img src="images/01_Cognizant_Hub_Index_P1_03.png" alt="">
-                </div>
-                <div class="text-container">
-                    <p class="mini-label">Advance Australia Prepare:</p>
-                    <h3>How to make Australian <br> businesses future-ready</h3>
-                    <p>
-                        Ausie rules: how Australian Business can lead the future is a report Lorem ipsum dolor sit amet consectetur 
-                        adipisicing elit. Facere iure velit, pariatur at laudantium eligendi voluptas necessitatibus saepe 
-                        exercitationem doloremque? Quas reiciendis laudantium atque magnam impedit modi dignissimos, blanditiis facere.
-                    </p>
-                    <ul>
-                        <li><img src="images/01_Cognizant_Hub_Index_P1_22.png" alt="">Firm fundamentals</li>
-                        <li><img src="images/01_Cognizant_Hub_Index_P1_22.png" alt="">Technology & Innocation ability</li>
-                        <li><img src="images/01_Cognizant_Hub_Index_P1_22.png" alt="">Talents</li>
-                        <li><img src="images/01_Cognizant_Hub_Index_P1_22.png" alt="">ESG</li>
-                    </ul>
-                    <a href="whitepaper.html">Read whitepaper</a>
-                </div>
-            </section>
-        </section>
+      <div class="line-animation"></div>
+    </header>
 
-        <section class="text-image-container">
-            <section class="text-image img-right max">
-                <img src="images/left-bg.png" class="backgroundObject-left" alt="">
-                <img src="images/right-bg.png" class="backgroundObject-right" alt="">
-                <div class="image-container">
-                    <img src="images/01_Cognizant_Hub_Index_P1_07.jpg" alt="">
-                </div>
-                <div class="text-container">
-                    <p class="mini-label">The Future-Ready business</p>
-                    <h3>Benchmark tool</h3>
-                    <p>
-                        Based on 2000 C-suite level original Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                        Dignissimos omnis a nam quisquam corporis unde dolore. 
-                        Repellendus qui corrupti laboriosam id dolor alias a culpa.
-                    </p>
-                    <a onclick="openModal(this)" 
-                    data-iframe="<iframe src='https://www.facebook.com/'' frameborder='0'></iframe>"
-                    >Try now <span><i class="fas fa-search"></i></span></a>
-                </div>
-            </section>
-        </section>
+    <header
+      class="homepageBanner"
+      style="background-image: url(images/map_03.png)"
+    >
+      <div class="mt"></div>
 
-        <section class="webinar">
-            <div class="container">
-                <p class="mini-label">Webinar</p>
-                <h3>Healthcare Insight Hour</h3>
-                <p class="when">July 15th 2022 3:00 pm SGT | 12:30pm IST | 11:00 am GST</p>
-                <p class="normalText">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum iure minus minima qui hic perferendis reiciendis perspiciatis voluptatibus cum culpa!
-                </p>
-                <ul>
-                    <li>
-                        <p class="position">Panel Discussion</p>
-                        <img src="images/01_Cognizant_Hub_Index_P1_34.png" alt="">
-                        <h4>Dexter Moran</h4>
-                        <p>President, Asia-Pacific and Japan, Varian Medical Systems</p>
-                    </li>
-                    <li>
-                        <p class="position"></p>
-                        <img src="images/01_Cognizant_Hub_Index_P1_31-09.png" alt="">
-                        <h4>Lainey Ingram</h4>
-                        <p>Chief executive, Icon Group</p>
-                    </li>
-                    <li>
-                        <p class="position"></p>
-                        <img src="images/01_Cognizant_Hub_Index_P1_36.png" alt="">
-                        <h4>Natalee Black</h4>
-                        <p>Director, global health, Saw Swee Hock School of Public Health</p>
-                    </li>
-                    <li>
-                        <p class="position">Moderated by</p>
-                        <img src="images/01_Cognizant_Hub_Index_P1_31.png" alt="">
-                        <h4>Anabelle Petersen</h4>
-                        <p>Contributing editor, The Economist Intelligence Unit</p>
-                    </li>
+      <section class="inner-container max">
+        <div class="text-container">
+          <h2>Advance Australia Prepare:</h2>
+          <h1>How to make Australian Business future-ready</h1>
+          <p>
+            Healthcare lags behind other industries on the Future-Ready Business
+            Benchmark. The industry's Lorem, ipsum dolor sit amet consectetur
+            adipisicing elit. Accusantium cum nulla iure cupiditate deserunt
+            iste beatae autem culpa delectus tenetur?
+          </p>
+          <div class="button-container">
+            <a href="whitepaper.html">
+              <div class="icon">
+                <img src="images/01_Cognizant_Hub_Index_P1_09.png" alt="" />
+              </div>
+              <div>
+                <p>Healthcare Industry Profile</p>
+                <h5>Whitepaper</h5>
+              </div>
+            </a>
+            <a
+              onclick="openModal(this)"
+              style="cursor: pointer"
+              data-iframe="<iframe src='https://www.facebook.com/'' frameborder='0'></iframe>"
+            >
+              <div class="icon">
+                <img src="images/01_Cognizant_Hub_Index_P1_06.png" alt="" />
+              </div>
+              <div>
+                <p>The Future-Ready Business</p>
+                <h5>Benchmarking tool</h5>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="commision">
+        <a href="#" target="_blank" onclick="gaEvent"
+          ><p>Commisioned by</p>
+          <img src="images/01_Cognizant_Hub_Index_P1_15.png" alt=""
+        /></a>
+      </section>
+      <section class="map-mobile max">
+        <img src="images/map_03.png" alt="" />
+      </section>
+    </header>
+
+    <section class="text-image-container">
+      <section class="text-image max">
+        <div class="image-container">
+          <img src="images/01_Cognizant_Hub_Index_P1_03.png" alt="" />
+        </div>
+        <div class="text-container">
+          <p class="mini-label">Advance Australia Prepare:</p>
+          <h3>
+            How to make Australian <br />
+            businesses future-ready
+          </h3>
+          <p>
+            Ausie rules: how Australian Business can lead the future is a report
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere iure
+            velit, pariatur at laudantium eligendi voluptas necessitatibus saepe
+            exercitationem doloremque? Quas reiciendis laudantium atque magnam
+            impedit modi dignissimos, blanditiis facere.
+          </p>
+          <ul>
+            <li>
+              <img src="images/01_Cognizant_Hub_Index_P1_22.png" alt="" />Firm
+              fundamentals
+            </li>
+            <li>
+              <img
+                src="images/01_Cognizant_Hub_Index_P1_22.png"
+                alt=""
+              />Technology & Innocation ability
+            </li>
+            <li>
+              <img
+                src="images/01_Cognizant_Hub_Index_P1_22.png"
+                alt=""
+              />Talents
+            </li>
+            <li>
+              <img src="images/01_Cognizant_Hub_Index_P1_22.png" alt="" />ESG
+            </li>
+          </ul>
+          <a href="whitepaper.html">Read whitepaper</a>
+        </div>
+      </section>
+    </section>
+
+    <section class="text-image-container">
+      <section class="text-image img-right max">
+        <img src="images/left-bg.png" class="backgroundObject-left" alt="" />
+        <img src="images/right-bg.png" class="backgroundObject-right" alt="" />
+        <div class="image-container">
+          <img src="images/01_Cognizant_Hub_Index_P1_07.jpg" alt="" />
+        </div>
+        <div class="text-container">
+          <p class="mini-label">The Future-Ready business</p>
+          <h3>Benchmark tool</h3>
+          <p>
+            Based on 2000 C-suite level original Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit. Dignissimos omnis a nam quisquam
+            corporis unde dolore. Repellendus qui corrupti laboriosam id dolor
+            alias a culpa.
+          </p>
+          <a
+            onclick="openModal(this)"
+            data-iframe="<iframe src='https://www.facebook.com/'' frameborder='0'></iframe>"
+            >Try now <span><i class="fas fa-search"></i></span
+          ></a>
+        </div>
+      </section>
+    </section>
+
+    <section class="webinar">
+      <div class="container">
+        <p class="mini-label">Webinar</p>
+        <h3>Healthcare Insight Hour</h3>
+        <p class="when">
+          July 15th 2022 3:00 pm SGT | 12:30pm IST | 11:00 am GST
+        </p>
+        <p class="normalText">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+          iure minus minima qui hic perferendis reiciendis perspiciatis
+          voluptatibus cum culpa!
+        </p>
+        <ul>
+          <li>
+            <p class="position">Panel Discussion</p>
+            <img src="images/01_Cognizant_Hub_Index_P1_34.png" alt="" />
+            <h4>Dexter Moran</h4>
+            <p>President, Asia-Pacific and Japan, Varian Medical Systems</p>
+          </li>
+          <li>
+            <p class="position"></p>
+            <img src="images/01_Cognizant_Hub_Index_P1_31-09.png" alt="" />
+            <h4>Lainey Ingram</h4>
+            <p>Chief executive, Icon Group</p>
+          </li>
+          <li>
+            <p class="position"></p>
+            <img src="images/01_Cognizant_Hub_Index_P1_36.png" alt="" />
+            <h4>Natalee Black</h4>
+            <p>
+              Director, global health, Saw Swee Hock School of Public Health
+            </p>
+          </li>
+          <li>
+            <p class="position">Moderated by</p>
+            <img src="images/01_Cognizant_Hub_Index_P1_31.png" alt="" />
+            <h4>Anabelle Petersen</h4>
+            <p>Contributing editor, The Economist Intelligence Unit</p>
+          </li>
+        </ul>
+        <a href="#">Access on-demand</a>
+      </div>
+    </section>
+
+    <section class="articleCards">
+      <img src="images/mapbg6_02.png" class="map-bg" alt="" />
+      <div class="container max">
+        <div class="text-container">
+          <p>Articles</p>
+          <h3>Industry cuts</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti at
+            quo doloribus, eius rem tempore beatae nam delectus magni dolorem!
+          </p>
+        </div>
+        <div class="card">
+          <div class="top">
+            <span>Industry cuts</span>
+            <img src="images/icon-card_06.png" alt="" />
+          </div>
+          <h4>Mining</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore
+            facere laboriosam nihil, ipsum cupiditate officia?
+          </p>
+          <a href="article.html">Learn more</a>
+        </div>
+        <div class="card">
+          <div class="top">
+            <span>Industry cuts</span>
+            <img src="images/icon-card_08.png" alt="" />
+          </div>
+          <h4>Insurance</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore
+            facere laboriosam nihil, ipsum cupiditate officia?
+          </p>
+          <a href="article.html">Learn more</a>
+        </div>
+        <div class="card">
+          <div class="top">
+            <span>Industry cuts</span>
+            <img src="images/icon-card_03.png" alt="" />
+          </div>
+          <h4>BFS</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore
+            facere laboriosam nihil, ipsum cupiditate officia?
+          </p>
+          <a href="article.html">Learn more</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="sponsorPerspective">
+      <div class="container max">
+        <div class="head">
+          <p>Sponsor's perspective</p>
+        </div>
+        <div class="body">
+          <div class="text-container">
+            <div>
+              <h2>Country Infographics</h2>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit
+                assumenda molestias ut cupiditate corrupti facilis excepturi.
+                Aut ipsa libero dolores!
+              </p>
+              <a href="infographics.html" onclick="gaEvent">Learn more</a>
+            </div>
+          </div>
+          <img src="images/01_Cognizant_Hub_Index_P1_45.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section class="sponsorPerspective" style="background-color: #2e308e">
+      <div class="back-to-top">Back to top <i class="fal fa-sort-up"></i></div>
+      <div class="container max">
+        <div class="head" style="background-color: #ededed">
+          <p id="toggle-sponsored-text">
+            Advertisement feature &nbsp;<svg
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fas"
+              data-icon="info-circle"
+              class="svg-inline--fa fa-info-circle fa-w-16"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+            >
+              <path
+                fill="currentColor"
+                d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"
+              ></path>
+            </svg>
+          </p>
+          <div id="sponsored-text-container" class="sponsored-content-text ads">
+            <img src="images/close-icon.png" id="close-sponsored-text" alt="" />
+            Our sponsors provide financial support for this website. We
+            endeavour to give our sponsors the opportunity to communicate their
+            messages in placements that are clearly demarcated. Such placements
+            are clearly labelled as Advertisement, Advertisement feature,
+            Sponsored content, Sponsor's perspective, "Brought to you by" the
+            sponsor or words to that effect. Occasionally, we group together
+            content from various sources relating to the same topic. In cases
+            where content from The Economist Group is included, it will be
+            clearly labelled as from The Economist or Economist Intelligence
+            Unit. At all times there is a clear division between our editorial
+            staff and sponsors, and sponsors are never allowed to influence what
+            our editorial teams write. Sponsors are solely responsible for their
+            content, and their views do not necessarily reflect those of The
+            Economist.
+          </div>
+        </div>
+        <div class="body left">
+          <div class="text-container">
+            <div>
+              <h2>Bio headline for Cognizant</h2>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit
+                assumenda molestias ut cupiditate corrupti facilis excepturi.
+                Aut ipsa libero dolores!
+              </p>
+              <a href="#" target="_blank" onclick="gaEvent"
+                >Learn more <i class="fal fa-chevron-right"></i
+              ></a>
+            </div>
+          </div>
+          <img src="images/01_Cognizant_Hub_Index_P1_49.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section id="section-footer" class="slide-content">
+      <div class="btn__wrapper" style="background-color: #f2f2f2">
+        <span
+          id="btn-back-to-top"
+          style="cursor: pointer"
+          href="#"
+          class="btn__back-to-top"
+          onClick="sendGA('Navigation-Buttons', 'Back to Top', 'variable')"
+          >BACK TO TOP</span
+        >
+      </div>
+      <footer id="page-footer" class="ec-footer">
+        <div class="css-1xmeil4-FooterDiv">
+          <footer class="css-17emyj5-Footer">
+            <div class="css-f09p1c-TopLayer fullwidth">
+              <div class="css-65infu-TopLayer fullwidth">
+                <ul class="css-13xpa7k-Sublist">
+                  <li>
+                    <a href="#"><span>Subscribe</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Group subscriptions</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Reuse our content</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Help and contact us</span></a>
+                  </li>
                 </ul>
-                <a href="#">Access on-demand</a>
+              </div>
             </div>
-        </section>
 
-        <section class="articleCards">
-            <img src="images/mapbg6_02.png" class="map-bg" alt="">
-            <div class="container max">
-                <div class="text-container">
-                    <p>Articles</p>
-                    <h3>Industry cuts</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Corrupti at quo doloribus, eius rem tempore beatae nam delectus magni dolorem!
-                    </p>
-                </div>
-                <div class="card">
-                    <div class="top"><span>Industry cuts</span> <img src="images/icon-card_06.png" alt=""></div>
-                    <h4>Mining</h4>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore facere laboriosam nihil, ipsum cupiditate officia?
-                    </p>
-                    <a href="article.html">Learn more</a>
-                </div>
-                <div class="card">
-                    <div class="top"><span>Industry cuts</span> <img src="images/icon-card_08.png" alt=""></div>
-                    <h4>Insurance</h4>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore facere laboriosam nihil, ipsum cupiditate officia?
-                    </p>
-                    <a href="article.html">Learn more</a>
-                </div>
-                <div class="card">
-                    <div class="top"><span>Industry cuts</span> <img src="images/icon-card_03.png" alt=""></div>
-                    <h4>BFS</h4>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore facere laboriosam nihil, ipsum cupiditate officia?
-                    </p>
-                    <a href="article.html">Learn more</a>
-                </div>
+            <div class="css-1tjwx5y-BottomLayer">
+              <div class="bottom-link">
+                <ul class="css-1g6aune-Left">
+                  <li>
+                    <a href="#"><span>Terms of Use</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Privacy</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Cookie Policy</span></a>
+                  </li>
+                  <li>
+                    <a
+                      href="#manage_cookie_preferences"
+                      class="open-popup-link ec-footer__link"
+                      onclick="event.preventDefault(); window.evidon.notice.showConsentTool();"
+                      >Manages</a
+                    >
+                    <!-- For New Consent -->
+                    <a
+                      href="#privacy-manager"
+                      class="open-popup-link ec-footer__link"
+                      onclick="javascript: window._cmp_.open();"
+                      >Manage Cookies</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"><span>Accessibility</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Modern Slavery Statement</span></a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><span>Do Not Sell My Personal Information</span></a
+                    >
+                  </li>
+                </ul>
+              </div>
             </div>
-        </section>
+          </footer>
+        </div>
+      </footer>
+    </section>
 
-        <section class="sponsorPerspective">
-            <div class="container max">
-                <div class="head">
-                    <p>Sponsor's perspective</p>
-                </div>
-                <div class="body">
-                    <div class="text-container">
-                        <div>
-                            <h2>Country Infographics</h2>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit assumenda molestias ut cupiditate corrupti facilis excepturi. Aut ipsa libero dolores!</p>
-                            <a href="infographics.html" onclick="gaEvent">Learn more</a>
-                        </div>
-                    </div>
-                    <img src="images/01_Cognizant_Hub_Index_P1_45.png" alt="">
-                </div>
-            </div>
-        </section>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/fontawesome.js"></script>
+    <script src="js/rellax.min.js"></script>
+    <script src="js/aos.js"></script>
 
-        <section class="sponsorPerspective" style="background-color: #2e308e;">
-            <div class="back-to-top">Back to top <i class="fal fa-sort-up"></i></div>
-            <div class="container max">
-                <div class="head" style="background-color: #ededed;">
-                    <p id="toggle-sponsored-text">Advertisement feature &nbsp;<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="info-circle" class="svg-inline--fa fa-info-circle fa-w-16 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"></path></svg></p>
-                    <div id="sponsored-text-container" class="sponsored-content-text ads">
-                        <img src="images/close-icon.png" id="close-sponsored-text" alt="">
-                        Our sponsors provide financial support for this website. We endeavour to give our sponsors the opportunity to communicate their messages in placements that are clearly demarcated. Such placements are clearly labelled as Advertisement, Advertisement feature, Sponsored content, Sponsor's perspective, "Brought to you by" the sponsor or words to that effect. Occasionally, we group together content from various sources relating to the same topic. In cases where content from The Economist Group is included, it will be clearly labelled as from The Economist or Economist Intelligence Unit. At all times there is a clear division between our editorial staff and sponsors, and sponsors are never allowed to influence what our editorial teams write. Sponsors are solely responsible for their content, and their views do not necessarily reflect those of The Economist.
-                    </div>
-                </div>
-                <div class="body left">
-                    <div class="text-container">
-                        <div>
-                            <h2>Bio headline for Cognizant</h2>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit assumenda molestias ut cupiditate corrupti facilis excepturi. Aut ipsa libero dolores!</p>
-                            <a href="#" target="_blank" onclick="gaEvent">Learn more <i class="fal fa-chevron-right"></i></a>
-                        </div>
-                    </div>
-                    <img src="images/01_Cognizant_Hub_Index_P1_49.png" alt="">
-                </div>
-            </div>
-        </section>
+    <script>
+      const backtotop = document.querySelector(".back-to-top");
+      backtotop.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behaviour: "smooth" });
+      });
+    </script>
 
-        <section id="section-footer" class="slide-content">
-            <div class="btn__wrapper" style="background-color: #f2f2f2;">
-                <span id="btn-back-to-top" style="cursor: pointer;" href="#" class="btn__back-to-top" onClick="sendGA('Navigation-Buttons', 'Back to Top', 'variable')">BACK TO TOP</span>
-            </div>    
-            <footer id="page-footer" class="ec-footer">
-                <div class="css-1xmeil4-FooterDiv">
-                    <footer class="css-17emyj5-Footer">
-                        <div class="css-f09p1c-TopLayer fullwidth">
-                            <div class="css-65infu-TopLayer fullwidth">
-                                <ul class="css-13xpa7k-Sublist">
-                                    <li><a href="https://www.economist.com/subscribe"><span>Subscribe</span></a></li>
-                                    <li><a href="https://groupsubscriptions.economist.com/"><span>Group subscriptions</span></a></li>
-                                    <li><a href="#"><span>Reuse our content</span></a></li>
-                                    <li><a href="https://www.economist.com/help/home"><span>Help and contact us</span></a></li>
-                                </ul>
-                            </div>
-                            
-                        </div>
-                        
-                        <div class="css-1tjwx5y-BottomLayer">
-                            <div class="bottom-link">
-                                <ul class="css-1g6aune-Left">
-                                    <li><a href="https://www.economist.com/legal/terms-of-use"><span>Terms of Use</span></a></li>
-                                    <li><a href="https://www.economistgroup.com/results_and_governance/governance/privacy/"><span>Privacy</span></a></li>
-                                    <li><a href="https://www.economistgroup.com/results_and_governance/governance/Cookies_information.html"><span>Cookie Policy</span></a></li>
-                                    <li>
-                                        <a href="#manage_cookie_preferences" class="open-popup-link ec-footer__link" onclick="event.preventDefault(); window.evidon.notice.showConsentTool();">Manages</a>
-                                        <!-- For New Consent -->
-                                        <a href="#privacy-manager" class="open-popup-link ec-footer__link" onclick="javascript: window._cmp_.open();">Manage Cookies</a>
-                                    </li>
-                                    <li><a href="https://www.economist.com/help/accessibilitypolicy"><span>Accessibility</span></a></li>
-                                    <li><a href="https://www.economistgroup.com/results_and_governance/governance/guiding_principles.html"><span>Modern Slavery Statement</span></a></li>
-                                    <li><a href="https://www.economistgroup.com/results_and_governance/governance/guiding_principles.html"><span>Do Not Sell My Personal Information</span></a></li>
-                                </ul>
-                            </div>
-                            <div class="css-1b1i8gz-Right">
-                                <p>Copyright © The Economist Newspaper Limited 2019. All rights reserved.</p>
-                            </div>
-                        </div>
-                    </footer>
-                </div>
-            </footer>
-        </section>
+    <script>
+      const openModal = (e) => {
+        const theModal = document.querySelector(".embedPopUp");
+        theModal.classList.add("embed-toggle");
+        document.querySelector(".iframeCon").innerHTML = e.dataset.iframe;
+      };
+      const closeModal = (e) => {
+        const theModal = document.querySelector(".embedPopUp");
+        theModal.classList.remove("embed-toggle");
+      };
+    </script>
 
-		<script src="js/jquery-3.3.1.min.js"></script>
-		<script src="js/slick.min.js"></script>
-		<script src="js/fontawesome.js"></script>
-		<script src="js/rellax.min.js"></script>
-		<script src="js/aos.js"></script>
+    <script>
+      function toggleMenu() {
+        var menuList = document.querySelector(".menu-list");
+        var top = document.querySelector(".top");
+        var center = document.querySelector(".center");
+        var bottom = document.querySelector(".bottom");
 
-        <script>
-            const backtotop = document.querySelector('.back-to-top');
-            backtotop.addEventListener('click', () => {
-                window.scrollTo({top: 0, behaviour: 'smooth'})
-            });
-        </script>
-
-        <script>
-            const openModal = (e) => {
-                const theModal = document.querySelector('.embedPopUp');
-                theModal.classList.add('embed-toggle');
-                document.querySelector('.iframeCon').innerHTML = e.dataset.iframe
-            }
-            const closeModal = (e) => {
-                const theModal = document.querySelector('.embedPopUp');
-                theModal.classList.remove('embed-toggle');
-            }
-        </script>
-
-        <script>
-            function toggleMenu () {
-                var menuList = document.querySelector('.menu-list');
-                var top = document.querySelector('.top');
-                var center = document.querySelector('.center');
-                var bottom = document.querySelector('.bottom');
-
-                menuList.classList.toggle('toggle-menu');
-                top.classList.toggle('rotate-top');
-                center.classList.toggle('translate-center');
-                bottom.classList.toggle('rotate-bottom');
-            }
-        </script>
-
-        <!-- for ga and open header info (sa footer ilalagay sa gitna)-->
-        <script>
-            /**
-
-            * GA Events
-
-            */
-            
-            $("#toggle-sponsored-text").on("click", function() {
-                $(".sponsored-content-text").slideToggle().toggleClass("advert-open");
-                console.log($('.sponsored-content-text').hasClass('advert-open'));
-                if ($('.sponsored-content-text').hasClass('advert-open')) {
-                    ga('send', 'event', 'Open-Content', 'Advertisement-Feature', 'open');
-                }
-                else {
-                    ga('send', 'event', 'Open-Content', 'Advertisement-Feature', 'close');
-                }
-            });
-            $('#close-sponsored-text').on('click', function() {
-                $('.sponsored-content-text').slideUp();
-                ga('send', 'event', 'Open-Content', 'Advertisement-Feature', 'close');
-            })
-
-            $("#toggle-sponsored-text1").on("click", function() {
-                $(".sponsored-content-text1").slideToggle().toggleClass("advert-open");
-                console.log($('.sponsored-content-text1').hasClass('advert-open'));
-                if ($('.sponsored-content-text1').hasClass('advert-open')) {
-                    ga('send', 'event', 'Open-Content', 'Advertisement-Feature', 'open');
-                }
-                else {
-                    ga('send', 'event', 'Open-Content', 'Advertisement-Feature', 'close');
-                }
-            });
-            $('#close-sponsored-text1').on('click', function() {
-                $('.sponsored-content-text1').slideUp();
-                ga('send', 'event', 'Open-Content', 'Advertisement-Feature', 'close');
-            })
-
-            jQuery(function () {
-                jQuery.scrollDepth({
-                    eventHandler: function (data) {
-                        if (data.event == 'ScrollDistance' && data.eventLabel == '25%') {
-                            ga('send', 'event', 'scroll-depth', '25%', '<?php the_title(); ?>-scroll25');
-                        } else if (data.event == 'ScrollDistance' && data.eventLabel == '50%') {
-                            ga('send', 'event', 'scroll-depth', '50%', '<?php the_title(); ?>-scroll50');
-                        } else if (data.event == 'ScrollDistance' && data.eventLabel == '75%') {
-                            ga('send', 'event', 'scroll-depth', '75%', '<?php the_title(); ?>-scroll75');
-                        } else if (data.event == 'ScrollDistance' && data.eventLabel == '100%') {
-                            ga('send', 'event', 'scroll-depth', '100%', '<?php the_title(); ?>-scroll100');
-                        }
-                    }
-                });
-            });
-
-            var seconds = 0;
-            function incrementSeconds() {
-                seconds += 1;
-                if (seconds >= 15) {
-                    clearInterval(timer);
-                    ga('send', 'event', '15_seconds', 'Read', '<?php the_title(); ?>');
-                }
-            }
-            var timer = setInterval(incrementSeconds, 1000);
-        </script>
-
-    </body>
-
+        menuList.classList.toggle("toggle-menu");
+        top.classList.toggle("rotate-top");
+        center.classList.toggle("translate-center");
+        bottom.classList.toggle("rotate-bottom");
+      }
+    </script>
+  </body>
 </html>
